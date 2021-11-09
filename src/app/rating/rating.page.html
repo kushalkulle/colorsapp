@@ -1,0 +1,60 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons>
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title > Rating</ion-title>
+
+
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <p style="text-align: center;
+  font-size: 50px;
+  border: 1px solid red;
+  padding: 20px;">hello</p>
+  <div class="tooltip">
+     <p>heyllo</p>
+  </div>
+
+
+ 
+  <h2 title="I'm a header">The title Attribute</h2>
+
+  <p title="I'm a tooltip">Mouse over this paragraph, to display the title attribute as a tooltip.</p>
+<ion-item>
+  <fieldset class="rating">
+    <input type="radio" [name]="inputName" value="5" [checked]="rating===5" />
+    <label title="Rocks!" (click)='onClick(5)'>5 stars</label>
+  
+    <input type="radio" [name]="inputName" value="4" [checked]="rating===4" />
+    <label title="Pretty good" (click)='onClick(4)'>4 stars</label>
+  
+    <input type="radio" [name]="inputName" value="3" [checked]="rating===3" />
+    <label title="Meh" (click)='onClick(3)'>3 stars</label>
+  
+    <input type="radio" [name]="inputName" value="2" [checked]="rating===2" />
+    <label title="Kinda bad" (click)='onClick(2)'>2 stars</label>
+  
+    <input type="radio" [name]="inputName" value="1" [checked]="rating===1" />
+    <label title="Sucks big time" (click)='onClick(1)'>1 star</label>
+  </fieldset>
+</ion-item>
+
+  <p>{{rating}}</p>
+
+
+  <button type="button" class="btn btn-outline-secondary mr-2" placement="top" ngbTooltip="Tooltip on top">
+    Tooltip on top
+  </button>
+  <button type="button" class="btn btn-outline-secondary mr-2" placement="right" ngbTooltip="Tooltip on right">
+    Tooltip on right
+  </button>
+  <button type="button" class="btn btn-outline-secondary mr-2" placement="bottom" ngbTooltip="Tooltip on bottom">
+    Tooltip on bottom
+  </button>
+  <button type="button" class="btn btn-outline-secondary mr-2" placement="left" ngbTooltip="Tooltip on left">
+    Tooltip on left
+  </button>
+</ion-content>
